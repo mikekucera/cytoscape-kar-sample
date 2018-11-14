@@ -1,0 +1,17 @@
+*.class
+.DS_Store
+
+# Package Files #
+*.jar
+*.war
+*.ear
+.settings
+
+#ignore anything in the compiled directory
+target/**/*
+DataForVictor/
+Mockupinterfaces/
+/target
+_build
+.project
+.classpath
