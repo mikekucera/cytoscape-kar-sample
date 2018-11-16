@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features name="kartest" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0">
 
-    <feature name="kartest" version="0.0.1-SNAPSHOT" install="auto">
+    <feature name="kartest-headless" version="0.0.1-SNAPSHOT" install="manual">
         <bundle>mvn:org.baderlab.kartest/org.baderlab.kartest.core/0.0.1-SNAPSHOT</bundle>
         <bundle>mvn:org.baderlab.kartest/org.baderlab.kartest.command/0.0.1-SNAPSHOT</bundle>
-        <bundle>mvn:org.baderlab.kartest/org.baderlab.kartest.ui/0.0.1-SNAPSHOT</bundle>
-        
         <bundle>mvn:com.google.code.gson/gson/2.8.5</bundle>
     </feature>
-
+    
+    <feature name="kartest-desktop" version="0.0.1-SNAPSHOT" install="manual">
+        <feature>kartest-headless</feature>
+        <bundle>mvn:org.baderlab.kartest/org.baderlab.kartest.ui/0.0.1-SNAPSHOT</bundle>
+    </feature>
+	
 </features>
